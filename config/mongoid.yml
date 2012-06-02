@@ -1,0 +1,20 @@
+development:
+  host: localhost
+  database: albers_development
+
+test:
+  host: localhost
+  database: albers_test
+
+# set these environment variables on your prod server
+production:
+  host: 199.204.217.189
+  port: <%= ENV['MONGOID_PORT'] %>
+  username: "albers"
+  password: "Jd)ACY58Yw[X5|"
+  database: "albers"
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
