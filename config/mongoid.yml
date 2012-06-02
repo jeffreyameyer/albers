@@ -1,5 +1,7 @@
 development:
-  host: localhost
+  host: 199.204.217.189
+  username: albers
+  password: up1d9A0Xl0dE5me
   database: albers_development
 
 test:
@@ -11,7 +13,7 @@ production:
   host: 199.204.217.189
   port: <%= ENV['MONGOID_PORT'] %>
   username: "albers"
-  password: "Jd)ACY58Yw[X5|"
+  password: "KJfzqXccVMU44Vv"
   database: "albers"
   # slaves:
   #   - host: slave1.local
