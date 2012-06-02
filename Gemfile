@@ -79,3 +79,4 @@ group :development do
   gem 'thin' # use the thin server instead of webrick during development
 end
 gem "sunspot_rails"
+gem "sunspot_mongoid"
