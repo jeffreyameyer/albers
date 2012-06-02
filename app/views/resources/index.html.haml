@@ -1,0 +1,7 @@
+%h1 Search Maps
+#search
+  = form_tag('/resources', :remote => true, :method => :get) do |f|
+    = text_field_tag :query, 'Search a world of maps'
+    = submit_tag "Search"
+
+#results

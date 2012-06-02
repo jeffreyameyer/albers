@@ -11,3 +11,171 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+* { margin:0; padding:0; }
+body, div, span, p, a, img, ul, ol, li, table, th, tr, td, form, fieldset, legend, dl, dt, dd, blockquote, applet, object { border:0; }
+body {
+  padding: 0;
+  background: #DEF1FA;
+  font: 0.8em/1.5 "arial",sans-serif;
+  color: #303030;
+  text-align: center;
+}
+
+/* obecne odkazy --------------------------------------------------------------- */
+a {color:#D95B43;}
+a:link {color:#D95B43; text-decoration: none;}
+a:hover {color:#C02942; text-decoration: none;}
+.more a {color: #6E6D6B; }
+
+/* nadpisy --------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 { margin:0; }
+h1 { font-size:200%; }
+h2 { font-size:160%; border-bottom: 2px solid #231F1C; margin: 0px}
+h3 { font-size:105%; border-bottom: 1px solid #ddd;}
+h4 { font-size:120%; }
+h5 { font-size:100%; }
+
+.rbroundbox h2 {color: #fff; font-size: 170%; margin-top: 0; border: 0;}
+
+/* layout ---------------------------------------------------------------------- */
+/* #layout { width:820px; margin:0 auto; text-align:left; } */
+#layout { width:960px; margin:0 auto; text-align:left; }
+
+/* hlavicka ------------------------------------------------------------------ */
+#header { position: relative; margin-bottom: 20px; }
+
+  #logo { position: relative; overflow: hidden; margin-top: 18px;  margin-left: 35px; }
+  #logo a {padding:30px 300px 4px 0;}
+  #logo span { color: #676767; font-weight: bold; }
+
+  #navigation{ display:block; font-size:95%; height:34px; margin-top:-47px; text-align:right; text-transform:uppercase; margin-right:5px;}
+  #navigation ul li{ display: inline; position: relative; }
+  #navigation ul{ padding-top: 0px; }
+  #navigation li a { color: #C4C6C2; padding: 7px 10px 7px 7px; text-decoration: none; }
+  #navigation li a:hover { color: #F38630; }
+  #navigation li a.home { background: url(/images/site/home16.png) no-repeat scroll 3px; }
+  #navigation .adminnav a {background:#EBECEE; color:#B41818;}
+
+  /* Profile links box at the top right */
+  #profile-links { position: absolute; right:22px; top:-14px; text-align: right; color: #999; font-size:18px; }
+  #profile-links a { color: #D95B43; }
+  #profile-links a:hover { color: #C02942; }
+  #profile-links ul { padding-top:8px; display:inline;}
+  #profile-links ul li { list-style:none; display:inline;}
+  #user-picture { border: 2px solid #FFF; margin:10px 0 0 15px; float: right; }
+
+  #anon { padding-top:10px; font-size: 95%; text-transform:uppercase; }
+  #anon ul {margin:15px 0 15px 40px;}
+  #anon ul a {color:#CACACA;padding:50px 30px;text-decoration:none;}
+  #anon ul li {display: inline; position: relative;  }
+  #anon li a.home { background: url(/images/site/home16.png) no-repeat scroll 8px; }
+  #anon li a.register { background: url(/images/site/check_icon.png) no-repeat scroll 0px; }
+
+  /* set millions of background images */
+  .rbroundbox { background:#D95B43 none repeat scroll 0 0; }
+  .rbtop div { background: url(/images/site/tl.gif) no-repeat top left; }
+  .rbtop { background: url(/images/site/tr.gif) no-repeat top right; }
+  .rbbot div { background: url(/images/site/bl.gif) no-repeat bottom left; }
+  .rbbot { background: url(/images/site/br.gif) no-repeat bottom right; clear: both; }
+
+  /* height and width stuff, width not really nessisary. */
+  .rbtop div, .rbtop, .rbbot div, .rbbot {
+      width: 100%;
+      height: 7px;
+      font-size: 1px;
+  }
+  .rbcontent { margin: 0 7px; }
+  .rbroundbox { width: 95%; margin: 1em auto; color: #fff; margin-bottom: 20px;}
+
+  .rbroundbox a { color: #fff; }
+  .rbroundbox a:hover { text-decoration: underline; }
+
+  .contents { float: left; padding: 12px 0 12px 10px; width:666px; z-index: 10; }
+
+  #panel-right { float:right; width:200px; padding: 15px 10px 10px 10px; }
+  #panel-right-inside {border-left: 1px solid #ca4747; padding: 0 0 0 16px;}
+  #panel-right span { color: #e49695; }
+  #panel-right p {margin: 0;}
+
+  #main { padding: 0 37px }
+
+  #footer { background:none; color: #b1b1b1; clear:both; overflow:hidden;}
+  #footer a{ color: #b1b1b1; text-decoration: none; }
+  #footer-inside { width:960px; margin:0 auto; text-align:left; padding: 26px 0; }
+  #footer-inside p { margin-top: 0; margin-bottom: 0; }
+
+  #copyright { float: left; width: 300px; }
+  #footer-links{ margin: 0 0 0 323px; text-align: right; }
+  #footer-links .admin a { color: white;}
+
+/* odstavce -------------------------------------------------------------------- */
+p { margin:15px 0; line-height: 24px; font-size: 95%}
+
+.contents p {color: #fff; margin-top: 10px;}
+
+/* tabulky --------------------------------------------------------------------- */
+table { margin:15px 0; border: 1px solid #cdcdcd; border-collapse:collapse; border-spacing:0; font-size:100%; width: 100%;}
+th { text-align:center; font-weight:bold; border: 1px solid #cdcdcd;}
+th, td { padding:4px 6px; border: 1px solid #cdcdcd;}
+tr.table-top {background: #e5e5e5; font-weight: bold;}
+
+/* seznamy --------------------------------------------------------------------- */
+ul, ol { display:block; list-style-type:none; margin:0; padding:0; }
+ul ul, ul ul ul, ol ol, ol ol ol { margin:0; margin-left:20px; }
+ol { list-style-type:decimal; }
+ol ol { list-style-type:upper-alpha; }
+ol ol ol {list-style-type:lower-alpha; }
+li { display:list-item; }
+ul li a { text-decoration: none; }
+
+/* definice -------------------------------------------------------------------- */
+dl { margin:15px 0; }
+dt { font-weight:bold; }
+dd { margin-left:30px; }
+
+/* ostatni --------------------------------------------------------------------- */
+fieldset { margin:15px 0; padding:10px; border:1px solid #CCC; }
+legend { margin-left:10px; font-size:100%; font-weight:bold; color:#000; }
+abbr, acronym, .help { border-bottom:1px dotted #CCC; cursor:help; }
+blockquote { margin:15px 20px; font-style:italic; }
+del, .del { text-decoration:line-through; }
+strong, .strong { font-weight:bold; }
+cite, em, q, var { font-style:italic; }
+code, kbd, samp  {font-family:monospace; font-size:110%; }
+hr { display:block; height:1px; margin:10px 0; padding:0; border:0 solid #CCC; background:#CCC; color:#CCC;}
+.light {padding: 4px 5px; background: #ac0001; text-decoration: none;} .light:hover {color: #fff;}
+.noscreen { display:none; }
+/*add by laxman*/
+#logo h1 { font-size:130%; height:100px; }
+#logo h1 a { height:78px; }
+#logo h1 img { float:left; height:60px; padding-top:10px; width:66px; }
+.mainpage { float:left; width:880px; border:1px solid #A6A7A9; padding:10px; background: #FDFEFF; min-height:500px;}
+.rightblock { float:left; padding-left:10px; width:215px; }
+
+
+#profile {position:relative;}
+#profile #btx {position:absolute; right:15px; top:5px;}
+#profile .wishes td {border:none;}
+#profile .wishes .comment {width:580px;}
+#profile .wishes .intra {padding:15px 20px 0;}
+#profile .wishes .innerxx td {border:1px solid #CDCDCD;}
+#profile .wishes .innerx .rate-bar {width:100px; background:none;}
+#profile .wishes .innerx .rate-bar .ui-progressbar-value  {height:12px;}
+#profile .wishes .innerx .rate-val {width:1%;}
+#profile table.wishes {border:none; margin:0px;}
+#profile table.innerx {border:none; margin:0px;}
+#profile table.innerxx {border:none; margin:0px;}
+#profile .innerx .intd { padding:0px;}
+#profile .wishes .product {background-color:#EDDFDF; border:1px solid #CDCDCD; }
+#profile .pspacer {height:20px;}
+#profile h3 {border-bottom:none; font-size:130%;}
+#profile h2 {border-bottom:none; }
+#profile h1 {margin:10px 20px 0px;}
+#profile .special-links { padding:20px; }
+
+.tl {text-align:left;}
+.tr {text-align:right;}
+.tc {text-align:center;}

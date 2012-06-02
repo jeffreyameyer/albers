@@ -70,3 +70,11 @@ gem "guard-cucumber", ">= 0.6.1", :group => :development
 gem "bson_ext", ">= 1.6.2"
 gem "mongoid", ">= 2.4.10"
 gem "will_paginate_mongoid"
+
+gem 'therubyracer'
+
+# Use unicorn as the web server
+gem 'unicorn'
+group :development do
+  gem 'thin' # use the thin server instead of webrick during development
+end
