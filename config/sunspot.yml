@@ -8,7 +8,7 @@ production:
 development:
   solr:
     hostname: 199.204.217.189
-    path: '/solr-development'
+    path: '/solr-devel'
     port: 8080
     log_level: INFO
 
