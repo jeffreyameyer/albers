@@ -30,7 +30,7 @@ define([
         _: _ 
       };
       var compiledTemplate = _.template( ResourcesListTemplate, data );
-      $("#page").html( compiledTemplate ); 
+      $("#results").html( compiledTemplate );
     }
   });
   return new ResourcesListView;

@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'models/resource.js'
+    'models/resource'
 ], function($, _, Backbone, Resource){
   var ResourceCollection = Backbone.Collection.extend({
     model: Resource,
