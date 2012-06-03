@@ -177,7 +177,8 @@ hr { display:block; height:1px; margin:10px 0; padding:0; border:0 solid #CCC; b
 
 #results {padding-left:10px;}
 
-.result-item .thumbnail {height:200px;overflow:hidden;width:415px; }
+.result-item .thumbnail {height:200px;overflow:hidden;width:263px; margin-bottom:5px;}
+.result-item .thumbnail img {max-height:200px;max-width:263px; }
 .result-item .ratings {left:-3px;position:absolute; }
 .result-item {
     display:inline-block;
@@ -185,8 +186,8 @@ hr { display:block; height:1px; margin:10px 0; padding:0; border:0 solid #CCC; b
     float:left;
     padding-top:10px;
     padding-left:10px;
-    padding-right:10px;
-    width:45%;
+    padding-right:20px;
+    width:263px;
 
 }
 
@@ -211,14 +212,9 @@ hr { display:block; height:1px; margin:10px 0; padding:0; border:0 solid #CCC; b
    	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
    	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
    	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    cursor:pointer;
 
-}
 
-#map-details .image img {max-width: 700px;}
-#map-details .source {float:left; padding-top:3px; font-style:italic;}
-#map-details .tags {float:right; margin-bottom:10px;padding-top:3px;}
-
-#map-details li {
     color: #606060;
    	border: solid 1px #b7b7b7;
    	background: #fff;
@@ -226,6 +222,12 @@ hr { display:block; height:1px; margin:10px 0; padding:0; border:0 solid #CCC; b
    	background: -moz-linear-gradient(top,  #fff,  #ededed);
    	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
 }
+
+.tag.nox{padding:0 3px;margin:0;}
+
+#map-details .image img {max-width: 700px;}
+#map-details .source {float:left; padding-top:3px; font-style:italic;}
+#map-details .tags {float:right; margin-bottom:10px;padding-top:3px;}
 
 
 #map-details .remove_tag a {padding:1px 4px;color: #606060;}

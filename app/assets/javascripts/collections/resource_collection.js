@@ -5,11 +5,16 @@ define([
     'models/resource'
 ], function($, _, Backbone, Resource){
   var ResourceCollection = Backbone.Collection.extend({
-    model: Resource,
-    initialize: function(){
+      model: Resource,
 
-    }
-
+      url: function () {
+          return '/resources/?query=' + encodeURIComponent(this.keywords)
+      },
+      
+      initialize: function(){
+          this.keywords = '';
+      }
+      
   });
  
   return new ResourceCollection;
