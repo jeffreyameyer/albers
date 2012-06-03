@@ -6,10 +6,12 @@ class Resource
   has_many :comments
   field :tags_array
 
+  after_save :reindex
+
   include Sunspot::Mongo
   searchable do
     string :tag, :multiple => true do
-      tags_array.map{|t| t['tag_name'] rescue ""}
+      self.tags_array.map{|t| t['tag_name']}
     end
     text :uri
   end
@@ -17,6 +19,11 @@ class Resource
   THRESHOLD = 20 #Number of resources needed to not kick off job
   def self.threshold
     THRESHOLD
+  end
+
+  private
+  def reindex
+    Sunspot.index(self)
   end
 
 end
