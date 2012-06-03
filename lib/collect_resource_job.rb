@@ -13,7 +13,7 @@ class CollectResourceJob  < Struct.new(:query)
       res = Resource.new(result)
       res.tags_array = []
       built_tags.each do |tag|
-        res.tags_array << {:tag_id => tag._id, :rating => 0}
+        res.tags_array << {:tag_id => tag._id, :tag_name => tag.name, :rating => 0}
       end
       res.save
     end
