@@ -83,3 +83,4 @@ gem "sunspot_mongoid"
 
 gem 'delayed_job_mongoid'
 gem 'google-search'
+gem 'mongoid_taggable'
