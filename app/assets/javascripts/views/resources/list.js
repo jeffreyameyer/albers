@@ -7,7 +7,7 @@ define([
 
 ], function($, _, Backbone, resourcesCollection, ResourcesListTemplate){
   var ResourcesListView = Backbone.View.extend({
-    el: $("#page"),
+    el: $("#results"),
     initialize: function(){
       this.collection = resourcesCollection;
       this.collection = resourcesCollection.add({ 
@@ -30,7 +30,7 @@ define([
         _: _ 
       };
       var compiledTemplate = _.template( ResourcesListTemplate, data );
-      $("#results").html( compiledTemplate );
+      this.el.html( compiledTemplate );
     }
   });
   return new ResourcesListView;
