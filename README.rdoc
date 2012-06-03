@@ -2,6 +2,12 @@
 
 An image aggregator/ rating system for finding maps for teachers.
 
+== Requirements
+
+Rails 3+ on Ruby 1.9.2+
+MongoDB 
+Apache Solr
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
