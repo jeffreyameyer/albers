@@ -9,7 +9,7 @@ class Resource
   include Sunspot::Mongo
   searchable do
     string :tag, :multiple => true do
-      tags_array.map{|t| Tag.find(t.tag_id).name rescue ""}
+      tags_array.map{|t| t.tag_name rescue ""}
     end
     text :uri
   end

@@ -18,7 +18,6 @@ class CollectResourceJob  < Struct.new(:query)
       end
       res.save!
     end
-
     Sunspot.commit
   end
 end
