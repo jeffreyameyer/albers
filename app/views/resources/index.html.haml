@@ -5,14 +5,14 @@
     = submit_tag "Search"
 
 %ul#results
-  - 10.times do |i|
-    %li#result
-      = up_icon
-      = down_icon
-      .thumbnail
-        %img{:src => 'http://www.javiertordable.com/img/underground-map-detail.png'}
-      .tags
-        - ['bus', 'tunnel', 'underground map'].each do |tag|
-          = link_to tag, resources_path(:query => tag)
+-#  - 10.times do |i|
+-#    %li#result
+-#      = up_icon
+-#      = down_icon
+-#      .thumbnail
+-#        %img{:src => 'http://www.javiertordable.com/img/underground-map-detail.png'}
+-#      .tags
+-#        - ['bus', 'tunnel', 'underground map'].each do |tag|
+-#          = link_to tag, resources_path(:query => tag)
 
-      %br/
+-#      %br/

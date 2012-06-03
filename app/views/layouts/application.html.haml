@@ -2,7 +2,7 @@
 %head
   %title Albers
   = stylesheet_link_tag    "application", :media => "all"
-  = javascript_include_tag "application"
+  = javascript_include_tag "libs/require/require", "data-main" => "/assets/main"
   = csrf_meta_tags
 
 %body{:class => yield(:body_class)}

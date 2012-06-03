@@ -1,0 +1,23 @@
+<ul>
+  <% _.each(resources, function(resource){ %>
+  <li>
+    <ul>
+      <li>Thumbnail: <img src=<%= resource.get("thumbnailLink") %> /></li>
+      <li>Notes: 
+        <ul>
+          <% _.each(resource.get("notes"), function(note){ %>
+          <li><%= note %></li>
+          <% }); %>
+        </ul>
+      <li>Rating: <%= resource.get("rating") %></li>
+      <li>Tags: 
+        <ul>
+          <% _.each(resource.get("tags"), function(tag){ %>
+          <li><%= tag %>,</li>
+          <% }); %>
+        </ul>
+      </li>
+    </ul>        
+  </li>            
+  <% }); %>
+</ul>
