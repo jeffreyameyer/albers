@@ -1,22 +1,6 @@
 <ul>
   <% _.each(resources, function(resource){ %>
-  <li class="result-item">
-    <div class="ratings">
-        <span class="ui-icon uptown"></span>
-        <span class="ui-icon downtown"></span>
-    </div>
-    <div class="thumbnail">
-        <img src=<%= resource.get("uri") %> />
-    </div>
-    <div class="tags">
-      <ul>
-        <% _.each(resource.get("tags_array"), function(tag){ %>
-          <li>
-            <a href=/?query=<%= tag %>><%= tag %></a>
-          </li>
-        <% }); %>
-      </ul>
-    </div>
+  <li class="result-item" id=<%= resource.get("_id") %>>
   </li>
   <% }); %>
 </ul>
