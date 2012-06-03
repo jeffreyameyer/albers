@@ -4,7 +4,7 @@ class ResourcesController < ApplicationController
   respond_to :html, :json
 
   def index
-    @query = params[:query] ? params[:query] : '5th grade'
+    @query = params[:query] ? params[:query] : 'maps'
     respond_with Resource.solr_search {fulltext @query; paginate :page => 1}.results
   end
 

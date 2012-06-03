@@ -11,7 +11,7 @@ class CollectResourceJob  < Struct.new(:query)
 
     puts "Result count: #{results.count}"
     results.each do |result|
-      res = Resource.new(result)
+      res = Resource.find_or_create_by(result)
       res.tags_array = []
       built_tags.each do |tag|
         res.tags_array << {:tag_id => tag._id, :tag_name => tag.name, :rating => 0}
