@@ -3,11 +3,11 @@
       <img src=<%= resource.get("uri") %>>
     </div>
 
-
     <div class="ratings">
       <span class="ui-icon uptown"></span>
       <span class="ui-icon downtown"></span>
     </div>
+
 
     <ul class='tags'>
       <% _.each(resource.get("tags_array"), function(tag){ %>
@@ -25,11 +25,14 @@
     <div class='clear'></div>
 
     <div class='source'>
-      <a href="http://<%= resource.v_url() %>"><%= resource.v_url() %></a>
+      Source: <a href="http://<%= resource.v_url() %>"><%= resource.v_url() %></a>
     </div>
 
     <div class='clear'></div>
-    <div class='notes'><%= resource.comments() %></div>
+    <div class='notes'>
+        <%= resource.get("title") %>
+        <%= resource.comments() %>
+    </div>
 </div>
 
 
