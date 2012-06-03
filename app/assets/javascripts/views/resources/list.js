@@ -11,6 +11,7 @@ define([
         el: $("#results"),
         initialize: function(){
             this.collection = resourcesCollection;
+            this.resource_views = [];
         },
         render: function(){
             // render the details for an item
@@ -19,7 +20,7 @@ define([
 
             var data = {
                 resources: this.collection.models,
-                _: _ 
+                _: _
             };
             var compiledTemplate = _.template( ResourcesListTemplate, data );
             this.el.html( compiledTemplate );
