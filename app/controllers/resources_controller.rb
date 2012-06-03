@@ -12,6 +12,11 @@ class ResourcesController < ApplicationController
     respond_with Resource.find(params[:id])
   end
 
+  def update
+    @resource = Resource.find(params[:id])
+    # params[:downvote] or params[:upvote]
+  end
+
   def search
     query = params[:query]
     page = (params[:page].blank? ? 1 : params[:page])
