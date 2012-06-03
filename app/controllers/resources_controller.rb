@@ -10,4 +10,11 @@ class ResourcesController < ApplicationController
 
   end
 
+  def search
+    @resources = Sunspot.search(Comment){}.results
+    if @resources.count < Resource.threshold
+      Resource.delay.collect_new_resources
+    end
+  end
+
 end
