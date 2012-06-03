@@ -1,16 +1,18 @@
-<div class='image'>
-  <img src=<%= resource.get("uri") %>>
+<div id="map-details">
+    <div class='image'>
+      <img src=<%= resource.get("uri") %>>
+    </div>
+    <div class='source'>
+      <a href=<%= resource.v_url() %>>Source</a>
+    </div>
+    <ul class='tags'>
+      <% _.each(resource.get("tags_array"), function(tag){ %>
+      <li class='tag'>
+        <%= tag %>
+        <div class='remove_tag'><a href="#">x</a></div>
+      </li>
+      <% }); %>
+    </ul>
+    <div class='clear'></div>
+    <div class='notes'><%= resource.comments() %></div>
 </div>
-<div class='source'>
-  <a href=<%= resource.v_url() %>>Source</a>
-</div>
-<ul class='tags'>
-  <% _.each(resource.get("tags_array"), function(tag){ %>
-  <li class='tag'>
-    <%= tag %>
-    <div class='remove_tag'><a href="#">x</a></div>
-  </li>
-  <% }); %>
-</ul>
-<div class='clear'></div>
-<div class='notes'><%= resource.comments() %></div>
