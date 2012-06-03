@@ -8,7 +8,7 @@ define([
       model: Resource,
 
       url: function () {
-          return '/resources/?query=' + encodeURIComponent(this.keywords)
+          return '/resources/search.json?query=' + encodeURIComponent(this.keywords)
       },
       
       initialize: function(){
