@@ -35,7 +35,6 @@ define([
         updateResources: function(keywords) {
             var that = this;
             this.collection.query = keywords;
-            alert(keywords);
             this.collection.fetch({
                 success: function() {
                     that.render();
