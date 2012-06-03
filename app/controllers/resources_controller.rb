@@ -14,10 +14,15 @@ class ResourcesController < ApplicationController
 
   def search
     query = params[:query]
-    @resources = Sunspot.search(Comment){}.results
-    if @resources.count < Resource.threshold
-      Delayed::Job.enqueue(CollectorResourceJob.new(query))
+    page = (params[:page].blank? ? 1 : params[:page])
+    @resources = Resource.solr_search { fulltext query; paginate :page => page}.results
+    logger.warn "RESOURCES: #{@resources}"
+    if params[:page] && params[:page].to_i <= 1
+      if @resources.count < Resource.threshold
+        Delayed::Job.enqueue(CollectResourceJob.new(query))
+      end
     end
+    respond_with(@resources, :include => :comments)
   end
 
 end
