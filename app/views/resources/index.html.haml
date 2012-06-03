@@ -1,10 +1,10 @@
-%h1 Search Maps
-#search
-  = form_tag('/resources', :remote => true, :method => :get) do |f|
-    = text_field_tag :query, @query
-    = submit_tag "Search"
+-#= form_tag('/resources', :remote => true, :method => :get) do |f|
+-#  = text_field_tag :query, @query
+-#  = submit_tag "Search"
 
-%ul#results
+#container
+
+-# #results
 -#  - 10.times do |i|
 -#    %li#result
 -#      = up_icon

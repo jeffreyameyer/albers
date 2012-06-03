@@ -3,19 +3,14 @@ define([
   'jQuery',
   'Underscore',
   'Backbone',
-  'views/resources/list',
-], function($, _, Backbone, ResourcesListView ){
+  'views/albers',
+], function($, _, Backbone, AlbersView ){
   var AppRouter = Backbone.Router.extend({
     routes: {
-      '/resources': 'showResources',
-      
       '*actions': 'defaultAction'
     },
-    showResources: function(){
-        ResourcesListView.render();
-    },
     defaultAction: function(actions){
-        this.showResources();
+        AlbersView.render();
     }
   });
 
