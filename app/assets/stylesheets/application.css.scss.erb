@@ -155,27 +155,23 @@ hr { display:block; height:1px; margin:10px 0; padding:0; border:0 solid #CCC; b
 .mainpage { float:left; width:880px; border:1px solid #A6A7A9; padding:10px; background: #FDFEFF; min-height:500px;}
 .rightblock { float:left; padding-left:10px; width:215px; }
 
-
-#profile {position:relative;}
-#profile #btx {position:absolute; right:15px; top:5px;}
-#profile .wishes td {border:none;}
-#profile .wishes .comment {width:580px;}
-#profile .wishes .intra {padding:15px 20px 0;}
-#profile .wishes .innerxx td {border:1px solid #CDCDCD;}
-#profile .wishes .innerx .rate-bar {width:100px; background:none;}
-#profile .wishes .innerx .rate-bar .ui-progressbar-value  {height:12px;}
-#profile .wishes .innerx .rate-val {width:1%;}
-#profile table.wishes {border:none; margin:0px;}
-#profile table.innerx {border:none; margin:0px;}
-#profile table.innerxx {border:none; margin:0px;}
-#profile .innerx .intd { padding:0px;}
-#profile .wishes .product {background-color:#EDDFDF; border:1px solid #CDCDCD; }
-#profile .pspacer {height:20px;}
-#profile h3 {border-bottom:none; font-size:130%;}
-#profile h2 {border-bottom:none; }
-#profile h1 {margin:10px 20px 0px;}
-#profile .special-links { padding:20px; }
-
 .tl {text-align:left;}
 .tr {text-align:right;}
 .tc {text-align:center;}
+
+
+/* icons */
+.ui-icon {
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 12px;
+    background-image: url(<%=asset_path "ui-icons.png"%>);
+}
+
+.uptown {background-position: -4px -16px;}
+.downtown {background-position: -69px -16px;}
+
+#result .thumbnail {height:200px;overflow:hidden;width:415px;}
