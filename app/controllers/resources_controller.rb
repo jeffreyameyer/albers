@@ -1,13 +1,15 @@
 class ResourcesController < ApplicationController
   protect_from_forgery
 
+  respond_to :html, :json
+
   def index
-    if request.xhr?
-      render :text => "alert('you win');"
-    end
+    @query = params[:query] ? params[:query] : '5th grade'
+    respond_with Resource.tagged_with_any(@query.split(" "))
+  end
 
-    @query = params[:query] ? params[:query] : 'Search a world of maps'
-
+  def show
+    respond_with Resource.find(params[:id])
   end
 
   def search
