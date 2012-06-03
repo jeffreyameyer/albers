@@ -4,11 +4,12 @@ define([
 ], function(_, Backbone) {
     Resource = Backbone.Model.extend({
         defaults: {
-            thumbnailLink: null,
-            sourceLink: null,
+            _id: null,
+            tag_array: [],
+            title: "",
+            uri: "",
+            visible_uri: "",
             notes: [],
-            rating: -1,
-            tags: [],
         },
         
         upvote: function() {
