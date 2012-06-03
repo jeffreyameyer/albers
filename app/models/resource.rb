@@ -1,14 +1,16 @@
 class Resource
   include Mongoid::Document
-  include Mongoid::Taggable
   field :title
   field :uri
   field :visible_uri
   has_many :comments
+  field :tags_array
 
   include Sunspot::Mongo
   searchable do
-    string :tags, :multiple => true
+    string :tag, :multiple => true do
+      tags_array.map{|t| Tag.find(t.tag_id).name rescue ""}
+    end
     text :uri
   end
 
@@ -17,7 +19,4 @@ class Resource
     THRESHOLD
   end
 
-  def self.collect_new_resources
-    #TODO: This is where you do thing.
-  end
 end

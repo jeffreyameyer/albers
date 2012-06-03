@@ -8,8 +8,8 @@
 <div class="tags">
   <ul>
     <% _.each(resource.get("tags_array"), function(tag){ %>
-    <li>
-      <a href=/?query=<%= tag %>><%= tag %></a>
+    <li class="tag nox">
+      <%= tag %>
     </li>
     <% }); %>
   </ul>
