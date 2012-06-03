@@ -6,9 +6,10 @@ class Resource
   field :visible_uri
   has_many :comments
 
-  include Sunspot::Mongoid
+  include Sunspot::Mongo
   searchable do
     string :tags, :multiple => true
+    text :uri
   end
 
   THRESHOLD = 20 #Number of resources needed to not kick off job

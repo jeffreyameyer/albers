@@ -3,7 +3,7 @@ class Comment
   belongs_to :resource
   field :body
 
-  include Sunspot::Mongoid
+  include Sunspot::Mongo
   searchable do
     text :body
   end
