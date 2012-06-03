@@ -25,6 +25,10 @@ define([
             });
         },
         render: function(){
+            // render the details for an item
+            // TODO: call this when they click
+            // $.facebox({ div: '#details-content' });
+
             var data = {
                 resources: this.collection.models,
                 _: _ 
