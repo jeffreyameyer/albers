@@ -72,10 +72,11 @@ gem "bson_ext", ">= 1.6.2"
 gem "mongoid", ">= 2.4.10"
 gem "will_paginate_mongoid"
 gem 'therubyracer'
-
+gem 'mongoid_taggable'
 # Use unicorn as the web server
 gem 'unicorn'
 group :development do
   gem 'thin' # use the thin server instead of webrick during development
 end
 gem "sunspot_rails"
+gem "sunspot_mongoid"

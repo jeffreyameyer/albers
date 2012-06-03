@@ -1,7 +1,18 @@
 %h1 Search Maps
 #search
   = form_tag('/resources', :remote => true, :method => :get) do |f|
-    = text_field_tag :query, 'Search a world of maps'
+    = text_field_tag :query, @query
     = submit_tag "Search"
 
-#results
+%ul#results
+  - 10.times do |i|
+    %li#result
+      = up_icon
+      = down_icon
+      .thumbnail
+        %img{:src => 'http://www.javiertordable.com/img/underground-map-detail.png'}
+      .tags
+        - ['bus', 'tunnel', 'underground map'].each do |tag|
+          = link_to tag, resources_path(:query => tag)
+
+      %br/
