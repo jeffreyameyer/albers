@@ -5,7 +5,7 @@ class ResourcesController < ApplicationController
 
   def index
     @query = params[:query] ? params[:query] : '5th grade'
-    respond_with Resource.tagged_with_any(@query.split(" "))
+    respond_with Resource.solr_search {fulltext @query; paginate :page => 1}.results
   end
 
   def show
