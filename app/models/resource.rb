@@ -10,10 +10,11 @@ class Resource
 
   include Sunspot::Mongo
   searchable do
-    string :tag, :multiple => true do
-      self.tags_array.map{|t| t['tag_name']}
+    text :tag do
+      self.tags_array.map{|t| t['tag_name']}.join(", ")
     end
     text :uri
+    text :title
   end
 
   THRESHOLD = 20 #Number of resources needed to not kick off job
