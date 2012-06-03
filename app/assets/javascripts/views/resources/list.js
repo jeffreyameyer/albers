@@ -14,13 +14,13 @@ define([
             this.collection = resourcesCollection.add({ 
                 _id: "e1",
                 uri: "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Antidorcas_marsupialis_2.jpg/334px-Antidorcas_marsupialis_2.jpg",
-                tags_array: [ "tag1", "tag2", "tag3" ]
+                tags_array: [ { tag_name: "tag1" }, { tag_name: "tag2" }, { tag_name: "tag3" }]
             });
 
             this.collection = resourcesCollection.add({ 
                 _id: "e2",
                 uri: "http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/2007-03-11_Amylostereum_laevigatum.jpg/100px-2007-03-11_Amylostereum_laevigatum.jpg",
-                tags_array: [ "tag4", "tag5", "tag6" ]
+                tags_array: [ { tag_name: "tag4" }, { tag_name: "tag5" }, { tag_name: "tag6" }]
             });
             this.resource_views = [];
         },
