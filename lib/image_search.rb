@@ -7,7 +7,7 @@ module ImageSearch
     @results = []
     
     Google::Search::Image.new(:query => query).each do |image|
-      @results << { 'uri' => image.uri, 'title' => image.title, 'visibile_uri' => image.visible_uri }
+      @results << { 'uri' => image.uri, 'title' => image.title, 'visible_uri' => image.visible_uri }
     end
     
     @results.to_json

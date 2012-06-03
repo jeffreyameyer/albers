@@ -1,0 +1,16 @@
+<div class="ratings">
+  <span class="ui-icon uptown"></span>
+  <span class="ui-icon downtown"></span>
+</div>
+<div class="thumbnail">
+  <img src=<%= resource.get("uri") %> />
+</div>
+<div class="tags">
+  <ul>
+    <% _.each(resource.get("tags_array"), function(tag){ %>
+    <li class="tag nox">
+      <%= tag.tag_name %>
+    </li>
+    <% }); %>
+  </ul>
+</div>

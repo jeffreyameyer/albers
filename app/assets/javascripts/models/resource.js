@@ -8,10 +8,32 @@ define([
             tag_array: [],
             title: "",
             uri: "",
-            visible_uri: "",
-            notes: [],
+            visible_uri: null,
+            visibile_uri: null,
+            comments: [],
         },
         
+        // this is Daniel's fault
+        v_url: function() {
+            if (this.get("visible_uri")) {
+                return this.get("visible_uri");
+            } else {
+                return this.get("visibile_uri");
+            }
+        },
+        
+        comments: function() {
+            comments_str = "";
+            _.each(this.get("comments"), function(comment) {
+                if (comments_str == "") 
+                    comments_str += (" || " + comment);
+                else
+                    comments_str = comment;
+            });
+            return comments_str;
+        },
+            
+
         upvote: function() {
             _rating = this.get("rating") + 1;
             this.set({ rating: _rating });
