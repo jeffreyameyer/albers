@@ -11,9 +11,10 @@ class ResourcesController < ApplicationController
   end
 
   def search
+    query = params[:query]
     @resources = Sunspot.search(Comment){}.results
     if @resources.count < Resource.threshold
-      Resource.delay.collect_new_resources
+      Delayed::Job.enqueue(CollectorResourceJob.new(query))
     end
   end
 

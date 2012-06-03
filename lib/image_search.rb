@@ -1,9 +1,9 @@
 require 'google-search'
 require 'json'
 
-class ImageSearch
-  attr_reader :results
-  def initialize(query)
+module ImageSearch
+
+  def self.run(query)
     @results = []
     
     Google::Search::Image.new(:query => query).each do |image|
