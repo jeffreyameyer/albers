@@ -1,9 +1,6 @@
-class TokenizeQuery
-  attr_reader :tags
-  def initialize(query)
-    @tags = []
-    
-    @tags = query.split(" ")
-    @tags << query
-  end  
+module TokenizeQuery
+  def self.run(query)
+    tags = query.split(' ') 
+    tags.count > 3 ? tags : tags << query
+  end
 end
